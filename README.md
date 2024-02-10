@@ -26,16 +26,16 @@ Berikan hak akses execute pada file delete_files.sh dan eksekusi
 
 
 ## Tips
-- Anda dapat menambahkan opsi -i ke perintah rm untuk mendapatkan konfirmasi sebelum menghapus file
+- Anda dapat menambahkan opsi ```-i``` ke perintah ```rm``` untuk mendapatkan konfirmasi sebelum menghapus file
 
 ## Peringatan
 - Script tersebut menghapus secara permanen. Pastikan Anda tidak menghapus file yang krusial
 - Jika Anda tidak yakin tentang file tersebut, Anda dapat meminta bantuan dengan bertanya ke komunitas atau membaca wiki dari OS yang digunakan
 
 ## Catatan
-Script bash ini hanya menghapus file yang ada di direktori ```/usr/share/help```. Jika Anda ingin menghapus file yang ada di subdirektori, Anda perlu menggunakan opsi -r dengan perintah find.
+Script bash ini hanya menghapus file yang ada di direktori ```/usr/share/help```. Jika Anda ingin menghapus file yang ada di subdirektori, Anda perlu menggunakan opsi ```-r``` dengan perintah ```find```.
 Berikut contohnya:
 ```bash
     find /usr/share/help -name "*.docbook" -type f -exec rm -f {} \;
 ```
-Perintah tersebut akan mencari semua file dengan ekstensi .docbook di direktori /usr/share/help dan subdirektorinya, kemduian akan terhapus semua file dengan ekstensi .docbook
+Perintah tersebut akan mencari semua file dengan ekstensi ```.docbook``` di direktori ```/usr/share/help``` dan subdirektorinya, kemduian akan terhapus semua file dengan ekstensi ```.docbook```
